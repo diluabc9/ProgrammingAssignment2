@@ -1,6 +1,6 @@
-##Creates loop for cachematrix and loop to solve inverse for the given matrix
+#Following function creates an object which stores matrix and caches it's inverse.
 
-#Cachematrix creation
+#make CacheMatrix function creates a matrix containing list of function to set and get the values of matrix and the inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-#Inverse of matrix
+#cache Solve function is to compute the inverse of matrix from the above mentioned function.
 
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
@@ -30,3 +30,4 @@ cacheSolve <- function(x, ...) {
   x$setinverse(i)
   i
 }
+#inverse of matrix can be computed by assigning matrix to our choice of variable or name and using the above functions.
